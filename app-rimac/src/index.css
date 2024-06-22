@@ -1,0 +1,20 @@
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 10px;
+}
+
+/* ftr - mobile */
+@media (min-width: 768px) {
+  body {
+      font-size: 18px;
+  }
+}
+
+/* ftr - web */
+@media (min-width: 1024px) {
+  body {
+      font-size: 20px;
+  }
+}
