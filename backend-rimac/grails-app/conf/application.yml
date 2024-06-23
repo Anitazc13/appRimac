@@ -1,0 +1,64 @@
+info:
+  app:
+    name: '@info.app.name@'
+    version: '@info.app.version@'
+    grailsVersion: '@info.app.grailsVersion@'
+grails:
+  plugin:
+    swagger:
+      version: "3.0"
+      title: "API Documentation"
+      description: "API Documentation for My Application"
+      contact:
+        name: "Your Name"
+        url: "http://www.yourwebsite.com"
+        email: "your.email@example.com"
+      license:
+        name: "Apache 2.0"
+        url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+      'responseMessage':
+        'default': 'Unexpected error'
+  controllers:
+    defaultScope: singleton
+  views:
+    default:
+      codec: html
+  mime:
+    disable:
+      accept:
+        header:
+          userAgents:
+          - Gecko
+          - WebKit
+          - Presto
+          - Trident
+    types:
+      json:
+      - application/json
+      - text/json
+      hal:
+      - application/hal+json
+      - application/hal+xml
+      xml:
+      - text/xml
+      - application/xml
+      atom: application/atom+xml
+      css: text/css
+      csv: text/csv
+      js: text/javascript
+      rss: application/rss+xml
+      text: text/plain
+      all: '*/*'
+dataSource: #todo: actualizar con AWS
+  dbCreate: update
+  url: jdbc:h2:mem:devDb;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+  driverClassName: org.h2.Driver
+  username: sa
+  password: ''
+  pooled: true
+  jmxExport: true
+hibernate:
+  cache:
+    queries: false
+    use_second_level_cache: false
+    use_query_cache: false
