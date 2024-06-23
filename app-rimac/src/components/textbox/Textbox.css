@@ -1,0 +1,77 @@
+/* Estilos básicos para dispositivos móviles */
+.textbox-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .textbox {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  
+  .textbox:focus {
+    outline: none;
+    border-color: #6200ea;
+  }
+  
+  .placeholder {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  
+  .textbox:focus + .placeholder,
+  .textbox:not(:placeholder-shown) + .placeholder {
+    top: 0;
+    left: 40px;
+    font-size: 12px;
+    color: #6200ea;
+  }
+  
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+  }
+  
+  .textbox-container.focus .icon {
+    color: #6200ea;
+  }
+  
+  /* Ajustes para pantallas más grandes */
+  @media (min-width: 768px) {
+    .textbox-container {
+      max-width: 400px;
+      margin: 20px auto;
+    }
+  
+    .textbox {
+      padding: 12px 12px 12px 45px;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  
+    .placeholder {
+      left: 45px;
+    }
+  
+    .textbox:focus + .placeholder,
+    .textbox:not(:placeholder-shown) + .placeholder {
+      font-size: 14px;
+    }
+  
+    .icon {
+      left: 15px;
+    }
+  }
+  
