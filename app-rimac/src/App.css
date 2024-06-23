@@ -1,13 +1,4 @@
-/* App.css */
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-#root {
-  height: 100%;
-}
+/* ContactForm.css */
 
 .container {
   display: flex;
@@ -16,7 +7,8 @@ body, html {
   height: 100%;
   background-color: #ffffff;
   flex-direction: column;
-  padding: 0 24px;
+  padding-left: 48px;
+  padding-right: 48px;
 }
 
 .form-wrapper {
@@ -26,19 +18,42 @@ body, html {
   width: 100%;
   max-width: 400px;
   text-align: center;
+  margin-top: 20px;
+  padding: 20px;
 }
 
 .policy-container {
-  margin-top: 16px;
-  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.policy-container label,
+.policy-container .underline {
+  margin-right: 8px;
+}
+
+.policy-container .checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.underline {
+  text-decoration: underline;
+  color: black; 
+  font-weight: 600;
+}
+
+.underline:hover {
+  color: black;
 }
 
 .form-group {
   margin-bottom: 8px;
 }
 
-.form-catpcha {
-  margin: 16px 0px;
+.form-captcha {
+  margin: 16px 0;
   padding: 0 24px;
 }
 
@@ -48,7 +63,7 @@ textarea {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #03050f;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -60,7 +75,6 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 10px;
 }
 
 button:hover {
@@ -72,19 +86,82 @@ label {
   text-align: left;
 }
 
-@media (min-width: 768px) {
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    padding: 15px;
-  }
+/* Estilos para el modal */
+.modal-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegúrate de que el modal esté en capa superior */
+}
 
-  button {
-    padding: 15px 30px;
-  }
+.modal {
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
 
-  .question.id {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
+.modal-content {
+  margin-top: 20px;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.close:hover {
+  color: #000000;
+  background-color: #e0e0e0;
+}
+
+.weight-600 {
+  font-weight: 600;
+}
+
+.spaced-paragraph {
+  line-height: 1.6; 
+  margin: 16px 0; 
+}
+
+.sbt-red {
+  color: red;
+  text-align: center;
+  font-weight: 600;
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.radio-label {
+  flex: 1 0 calc(50% - 10px); /* Ocupa el 50% del ancho menos el espacio entre elementos */
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px; /* Espacio entre opciones */
+  margin-right: 10px; /* Espacio entre opciones */
 }

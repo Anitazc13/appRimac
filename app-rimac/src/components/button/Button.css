@@ -1,50 +1,23 @@
 .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 12px 24px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button.primary {
-    background-color: #ff69b4;
-    color: #ffffff;
-  }
-  
-  .button.secondary {
-    background-color: transparent;
-    border: 3px solid #000000;
-    color: #000000;
-  }
-  
-  .button.tertiary {
-    background-color: transparent;
-    color: #000000;
-  }
-  
-  .button.disabled {
-    background-color: #cccccc;
-    color: #888888;
-    cursor: not-allowed;
-  }
-  
-  .spinner {
-    border: 4px solid rgba(0, 0, 0, 0.1);
-    border-left-color: #000;
-    border-radius: 50%;
-    width: 16px;
-    height: 16px;
-    animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  background-color: #FF04F5;
+  color: white;
+  border-color: #FF04F5;
+}
+
+.button.selected {
+  background-color: #FF04F5;
+  color: white;
+  border-color: #FF04F5;
+}
