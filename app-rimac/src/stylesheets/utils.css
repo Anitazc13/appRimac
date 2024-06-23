@@ -46,7 +46,7 @@
   
   .h3 {
     margin: 20px 50px;
-    font-family: Roboto;
+    font-family: 'BRSonoma', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -67,7 +67,7 @@
   }
   
   .anchor-font {
-    font-family: Roboto;
+    font-family: 'BRSonoma', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -75,7 +75,7 @@
   }
   
   .label-text {
-    font-family: Roboto;
+    font-family: 'BRSonoma', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -186,6 +186,10 @@
   .mb-16 {
     margin-bottom: 16px;
   }
+
+  .mt-8 {
+    margin-top: 8px;
+  }
   
   .grid {
     display: grid;
@@ -211,6 +215,14 @@
   .pt-8 {
     padding-top: 8px;
   }
+
+  .mb-16 {
+    margin-bottom: 16px;
+  }
+
+  .mt-16 {
+    margin-top: 16px;
+  }
   
   .mb-40 {
     margin-bottom: 40px;
@@ -235,3 +247,33 @@
   .p-48 {
     padding: 0 48px;
   }
+
+  .justify-text {
+    text-align: justify;
+  }
+
+  .justify-left {
+    text-align: left;
+  }
+  
+  .align-center {
+    text-align: center;  
+  }
+  
+  .capitalize {
+    text-transform: capita  lize;
+  }
+  
+  .color-red {
+    color: red;
+  }
+
+  .fs-24 {
+    font-size: 24px;
+  }
+
+  .lh-15 {
+    line-height: 1.5;
+  }
+
+  
